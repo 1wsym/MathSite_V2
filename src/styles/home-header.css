@@ -1,0 +1,44 @@
+.home-background {
+    background-image: linear-gradient(10deg,
+            var(--md-sys-color-background) 70%,
+            var(--md-sys-color-primary-container) 100%,
+            transparent 10%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home-header {
+    width: 100%;
+    padding-top: 200px;
+    padding-left: 72px;
+}
+
+.home-header h2 {
+    color: var(--md-sys-color-primary);
+}
+
+.home-header p {
+    color: var(--md-sys-color-on-surface);
+}
+
+.home-header div {
+    width: 500px;
+}
+
+.buttons-in-home {
+    display: flex;
+    gap: 8px;
+}
+
+md-outlined-button.outlined-buttons-in-home {
+    --md-outlined-button-outline-color: var(--md-sys-color-outline-variant);
+    --md-outlined-button-label-text-color: var(--md-sys-color-on-surface-variant);
+    --md-outlined-button-label-text-size: 16px;
+}
+
+md-filled-button.start-button-in-home {
+    --md-filled-button-label-text-size: 16px;
+    --md-filled-button-container-shape: 15px;
+    --md-filled-icon-button-container-color: var(--md-sys-color-primary);
+    --md-filled-icon-button-icon-color: var(--md-sys-color-on-primary);
+}

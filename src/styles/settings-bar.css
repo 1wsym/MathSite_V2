@@ -1,0 +1,39 @@
+.settings-bar,
+.to-home-in-settings-bar {
+    position: fixed;
+    top: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+.settings-bar {
+    right: 10px;
+}
+
+.to-home-in-settings-bar {
+    left: 10px;
+}
+
+md-filled-icon-button.info-button-in-settings-bar {
+    --md-filled-icon-button-container-width: 56px;
+    --md-filled-icon-button-container-height: 56px;
+    --md-filled-icon-button-container-shape: 50px;
+    --md-filled-icon-button-container-color: var(--md-sys-color-secondary-container);
+    --md-filled-icon-button-icon-color: var(--md-sys-color-on-secondary-container);
+}
+
+md-icon.info-icon-in-settings-bar {
+    --md-icon-size: 24px;
+}
+
+md-filled-icon-button.theme-button-in-settings-bar {
+    --md-filled-icon-button-container-width: 56px;
+    --md-filled-icon-button-container-height: 56px;
+    --md-filled-icon-button-container-shape: 15px;
+    --md-filled-icon-button-container-color: var(--md-sys-color-primary);
+    --md-filled-icon-button-icon-color: var(--md-sys-color-on-primary);
+}
+
+md-icon.theme-icon-in-settings-bar {
+    --md-icon-size: 24px;
+}

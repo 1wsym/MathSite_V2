@@ -1,0 +1,7 @@
+#MainBlock {
+    width: 80%;
+    height: 500px;
+    background-color: var(--md-sys-color-surface-container);
+    margin: 100px auto;
+    border-radius: 50px;
+}

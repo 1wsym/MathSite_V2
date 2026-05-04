@@ -23,3 +23,7 @@ a {
     text-decoration: none;
     color: var(--md-sys-color-on-surface);
 }
+
+li{
+    color: var(--md-sys-color-on-surface);
+}

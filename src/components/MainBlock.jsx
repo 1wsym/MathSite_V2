@@ -7,7 +7,7 @@ import rehypeKatex from 'rehype-katex';
 
 const theory = import.meta.glob("../content/theory/*.md", { as: 'raw', eager: true });
 const materials = import.meta.glob("../content/materials/*.md", { as: 'raw', eager: true });
-console.log("Найденные файлы теории при загрузке:", theory);
+console.error("Найденные файлы теории при загрузке:", theory);
 
 function MainBlock({ activeId, type }) {
     const allContent = {
@@ -17,12 +17,16 @@ function MainBlock({ activeId, type }) {
 
     const currentFiles = allContent[type] || {};
     const targetKey = Object.keys(currentFiles).find(key => {
-        const fileName = key.split('/').pop();
-        return fileName === `${activeId}.md`;
+
+        return key.endsWith(`/${activeId}.md`);
     });
 
+    if (Object.keys(currentFiles).length === 0) {
+        return <div>Файлы не найдены в категории {type}</div>;
+    }
+
     const content = targetKey ? currentFiles[targetKey] : "";
-    console.log("Доступные ключи в текущем типе:", Object.keys(currentFiles));
+    console.error("Доступные ключи в текущем типе:", Object.keys(currentFiles));
     return (
         <div id="MainBlock">
             <ReactMarkdown

@@ -7,6 +7,7 @@ import rehypeKatex from 'rehype-katex';
 
 const theory = import.meta.glob("../content/theory/*.md?raw", { as: 'raw', eager: true });
 const materials = import.meta.glob("../content/materials/*.md?raw", { as: 'raw', eager: true });
+console.log("Найденные файлы теории при загрузке:", theory);
 
 function MainBlock({ activeId, type }) {
     const allContent = {

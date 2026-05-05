@@ -9,7 +9,7 @@ import "./App.css"
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/MathSite_V2">
       <SettingsBar />
       <Routes>
         <Route path="/" element={<Home />} />

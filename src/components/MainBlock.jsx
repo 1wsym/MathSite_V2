@@ -5,27 +5,23 @@ import ReactMarkdown from 'react-markdown';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
-const theory = import.meta.glob("../content/theory/*.md", { as: 'raw', eager: true });
-const materials = import.meta.glob("../content/materials/*.md", { as: 'raw', eager: true });
-console.error("Найденные файлы теории при загрузке:", theory);
+const theory = import.meta.glob("/src/content/theory/*.md", { as: 'raw', eager: true });
+const materials = import.meta.glob("/src/content/materials/*.md", { as: 'raw', eager: true });
 
 function MainBlock({ activeId, type }) {
-    const allContent = {
-        theory: theory,
-        materials: materials
-    };
+    const currentFiles = type === 'theory' ? theory : materials;
 
-    const currentFiles = allContent[type] || {};
+    console.log("Ключи в проде:", Object.keys(currentFiles));
+
     const targetKey = Object.keys(currentFiles).find(key => {
-
-        return key.endsWith(`/${activeId}.md`);
+        const fileName = key.split('/').pop();
+        return fileName === `${activeId}.md`;
     });
 
-    if (Object.keys(currentFiles).length === 0) {
-        return <div>Файлы не найдены в категории {type}</div>;
-    }
+    console.log("Ищем файл для ID:", activeId);
+    console.log("Найденный ключ:", targetKey);
 
-    const content = targetKey ? currentFiles[targetKey] : "";
+    const content = targetKey ? currentFiles[targetKey] : "Загрузка или файл не найден...";
     console.error("Доступные ключи в текущем типе:", Object.keys(currentFiles));
     return (
         <div id="MainBlock">

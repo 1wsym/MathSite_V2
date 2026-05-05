@@ -1,15 +1,20 @@
 import "../styles/training.css"
-import topicsData from "../content/titles.json"
+import titlesList from "../content/titles.json"
 import TopicsItem from "./TopicsItem";
 
-function TopicsList({ onSelectTopic }) {
+function TopicsList({ onSelectTopic, activeSubTopicId }) {
 
     return (
         <>
             <div className="topics-list">
                 <ul>
-                    {topicsData.map((topic) => (
-                        <TopicsItem key={topic.id} topic={topic} onSelect={onSelectTopic}/>
+                    {titlesList.map((topic) => (
+                        <TopicsItem
+                            key={topic.id}
+                            topic={topic}
+                            onSelect={onSelectTopic}
+                            selectedId={activeSubTopicId}
+                        />
                     ))}
                 </ul>
             </div>

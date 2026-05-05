@@ -7,13 +7,14 @@ import "../styles/training.css"
 function Training() {
 
     const [activeTopicId, setActiveTopicId] = useState(null);
+    const [contentType, setContentType] = useState('theory');
 
     return (
         <>
             <div id="Training">
-                <TopicsList onSelectTopic={setActiveTopicId} />
-                <MainBlock activeId={activeTopicId} />
-                <Sidebar />
+                <TopicsList onSelectTopic={setActiveTopicId} activeSubTopicId={activeTopicId} />
+                <MainBlock activeId={activeTopicId} type={contentType} />
+                <Sidebar onTypeChange={setContentType} activeType={contentType} />
             </div>
         </>
     )

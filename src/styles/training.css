@@ -24,7 +24,8 @@
     max-width: 400px;
     overflow-y: auto;
     scrollbar-color: var(--md-sys-color-outline-variant) transparent;
-    scrollbar-width: thin
+    scrollbar-width: thin;
+    display: flex;
 }
 
 .topics-list li {
@@ -53,6 +54,7 @@
     flex-direction: column;
     list-style: none;
     gap: 24px;
+    padding-left: 10px;
 }
 
 .topics-list ol {
@@ -86,6 +88,12 @@ md-filled-button.sidebar-button-practice,
 md-filled-button.sidebar-button-materials {
     --md-filled-button-container-color: var(--md-sys-color-secondary-container);
     --md-filled-button-label-text-color: var(--md-sys-color-on-secondary-container);
+    transition: --md-filled-button-container-color 0.2s;
+}
+
+md-filled-button.active {
+    --md-filled-button-container-color: var(--md-sys-color-primary);
+    --md-filled-button-label-text-color: var(--md-sys-color-on-primary);
 }
 
 md-filled-button.sidebar-button-calculator {
@@ -101,4 +109,8 @@ md-filled-button.sidebar-button-calculator {
 .list-icons.is-open {
     transform: rotate(90deg);
     transition: 0.2s ease;
+}
+
+.subtopic-item.active {
+    color: var(--md-sys-color-primary);
 }

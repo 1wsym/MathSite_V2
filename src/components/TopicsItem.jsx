@@ -2,9 +2,10 @@ import { useState } from "react";
 
 import "../styles/training.css"
 
-function TopicsItem({ topic, onSelect }) {
+function TopicsItem({ topic, onSelect, selectedId }) {
     const [isOpen, setIsOpen] = useState(false)
-    const toggleOpen = (event) => {
+
+    const toggleOpen = () => {
         setIsOpen(!isOpen)
     }
 
@@ -18,7 +19,7 @@ function TopicsItem({ topic, onSelect }) {
                 {isOpen && (
                     <ol onClick={(event) => event.stopPropagation()}>
                         {topic.subTitles.map((subTopic) => (
-                            <li key={subTopic.id} onClick={() => onSelect(subTopic.id)}>{subTopic.title} </li>
+                            <li className={`subtopic-item ${subTopic.id === selectedId ? 'active' : ''}`} key={subTopic.id} onClick={() => onSelect(subTopic.id)}>{subTopic.title}</li>
                         ))}
                     </ol>
                 )}

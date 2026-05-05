@@ -1,0 +1,9 @@
+#MainBlock {
+    color: var(--md-sys-color-on-surface);
+    padding: 25px;
+    padding-left: 50px;
+}
+
+#MainBlock h1 {
+    text-align: center;
+}

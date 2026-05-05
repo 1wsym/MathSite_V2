@@ -12,8 +12,10 @@ function App() {
     <BrowserRouter basename="/MathSite_V2">
       <SettingsBar />
       <Routes>
+        <Route index element={<Home />} />
         <Route path="/" element={<Home />} />
         <Route path="/training" element={<Training />} />
+        <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>
   )

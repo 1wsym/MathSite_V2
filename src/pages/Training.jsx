@@ -6,7 +6,7 @@ import "../styles/training.css"
 
 function Training() {
 
-    const [activeTopicId, setActiveTopicId] = useState(null);
+    const [activeTopicId, setActiveTopicId] = useState(0);
     const [contentType, setContentType] = useState('theory');
 
     return (

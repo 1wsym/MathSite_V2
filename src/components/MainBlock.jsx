@@ -11,18 +11,13 @@ const materials = import.meta.glob("/src/content/materials/*.md", { as: 'raw', e
 function MainBlock({ activeId, type }) {
     const currentFiles = type === 'theory' ? theory : materials;
 
-    console.log("Ключи в проде:", Object.keys(currentFiles));
-
     const targetKey = Object.keys(currentFiles).find(key => {
         const fileName = key.split('/').pop();
         return fileName === `${activeId}.md`;
     });
 
-    console.log("Ищем файл для ID:", activeId);
-    console.log("Найденный ключ:", targetKey);
+    const content = targetKey ? currentFiles[targetKey] : "";
 
-    const content = targetKey ? currentFiles[targetKey] : "Загрузка или файл не найден...";
-    console.error("Доступные ключи в текущем типе:", Object.keys(currentFiles));
     return (
         <div id="MainBlock">
             <ReactMarkdown

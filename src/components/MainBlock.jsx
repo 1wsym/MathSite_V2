@@ -16,9 +16,10 @@ function MainBlock({ activeId, type }) {
     };
 
     const currentFiles = allContent[type] || {};
-    const targetKey = Object.keys(currentFiles).find(key =>
-        key.endsWith(`/${activeId}.md`)
-    );
+    const targetKey = Object.keys(currentFiles).find(key => {
+        const fileName = key.split('/').pop();
+        return fileName === `${activeId}.md`;
+    });
 
     const content = targetKey ? currentFiles[targetKey] : "";
     console.log("Доступные ключи в текущем типе:", Object.keys(currentFiles));

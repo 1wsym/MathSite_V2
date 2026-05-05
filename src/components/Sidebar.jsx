@@ -8,6 +8,8 @@ function Sidebar() {
                 <md-filled-button className="sidebar-button-theory">Теория</md-filled-button>
                 <md-filled-button className="sidebar-button-practice">Практика</md-filled-button>
                 <md-filled-button className="sidebar-button-materials">Материалы</md-filled-button>
+                <hr id="hr-sidebar" />
+                <md-filled-button className="sidebar-button-calculator">Калькулятор</md-filled-button>
             </div>
         </>
     )

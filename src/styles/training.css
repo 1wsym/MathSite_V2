@@ -1,31 +1,72 @@
 #Training {
     display: flex;
-    gap: 50px;
+    gap: 10px;
+    overflow: hidden;
+    height: 100vh;
 }
 
 #MainBlock {
     width: 80%;
-    height: 1000px;
     margin: 10px auto;
-    background-color: var(--md-sys-color-secondary-container);
+    background-color: var(--md-sys-color-surface-container);
     border-radius: 50px;
+    overflow-y: auto;
+    scrollbar-width: none;
 }
 
-.topics-list,
 .sidebar-buttons {
     margin-top: 100px;
 }
 
 .topics-list {
-    color: var(--md-sys-color-);
+    margin-top: 50px;
+    padding-right: 16px;
+    max-width: 400px;
+    overflow-y: auto;
+    scrollbar-color: var(--md-sys-color-outline-variant) transparent;
+    scrollbar-width: thin
+}
+
+.topics-list li {
+    cursor: pointer;
+}
+
+.icon-and-string {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+
+.icon-and-string:hover,
+.topics-list ol li:hover {
+    color: var(--md-sys-color-primary);
+}
+
+.icon-and-string.is-open {
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+    border-radius: 25px;
 }
 
 .topics-list ul {
+    display: flex;
+    flex-direction: column;
     list-style: none;
+    gap: 24px;
+}
+
+.topics-list ol {
+    padding-top: 16px;
+    margin-left: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .arrows-list {
     display: flex;
+    flex-direction: column;
+
 }
 
 .sidebar-buttons {
@@ -35,9 +76,29 @@
     margin-right: 10px;
 }
 
+#hr-sidebar {
+    width: 48px;
+    border-color: var(--md-sys-color-outline-variant);
+}
+
 md-filled-button.sidebar-button-theory,
 md-filled-button.sidebar-button-practice,
 md-filled-button.sidebar-button-materials {
     --md-filled-button-container-color: var(--md-sys-color-secondary-container);
     --md-filled-button-label-text-color: var(--md-sys-color-on-secondary-container);
+}
+
+md-filled-button.sidebar-button-calculator {
+    --md-filled-button-container-color: var(--md-sys-color-tertiary-container);
+    --md-filled-button-label-text-color: var(--md-sys-color-on-tertiary-container);
+    --md-filled-button-container-shape: 8px;
+}
+
+.list-icons {
+    transition: 0.2s ease;
+}
+
+.list-icons.is-open {
+    transform: rotate(90deg);
+    transition: 0.2s ease;
 }

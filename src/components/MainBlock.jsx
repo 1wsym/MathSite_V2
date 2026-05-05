@@ -5,8 +5,8 @@ import ReactMarkdown from 'react-markdown';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
-const theory = import.meta.glob("../content/theory/*.md?raw", { as: 'raw', eager: true });
-const materials = import.meta.glob("../content/materials/*.md?raw", { as: 'raw', eager: true });
+const theory = import.meta.glob("/src/content/theory/*.md", { as: 'raw', eager: true });
+const materials = import.meta.glob("/src/content/materials/*.md", { as: 'raw', eager: true });
 console.log("Найденные файлы теории при загрузке:", theory);
 
 function MainBlock({ activeId, type }) {
@@ -21,7 +21,7 @@ function MainBlock({ activeId, type }) {
     );
 
     const content = targetKey ? currentFiles[targetKey] : "";
-console.log("Доступные ключи в текущем типе:", Object.keys(currentFiles));
+    console.log("Доступные ключи в текущем типе:", Object.keys(currentFiles));
     return (
         <div id="MainBlock">
             <ReactMarkdown

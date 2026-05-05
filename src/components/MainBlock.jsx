@@ -20,7 +20,7 @@ function MainBlock({ activeId, type }) {
     );
 
     const content = targetKey ? currentFiles[targetKey] : "";
-
+console.log("Доступные ключи в текущем типе:", Object.keys(currentFiles));
     return (
         <div id="MainBlock">
             <ReactMarkdown

@@ -5,7 +5,7 @@ const BASE_URL = 'https://gnews.io/api/v4/top-headlines'
 
 export const getNews = async () => {
     try {
-        const url = `${BASE_URL}?category=science&lang=ru&country=ru&max=10&apikey=${API_KEY}`;
+        const url = `${BASE_URL}?q=математика OR косинус OR синус OR тригонометрия OR геометрия OR алгебра OR стереометрия OR наука OR школа OR учеба OR обучение AND NOT война AND NOT украина AND NOT политика AND NOT путин&lang=ru&country=ru&max=10&apikey=${API_KEY}`;
         const response = await fetch(url)
         const data = await response.json()
         return data.articles

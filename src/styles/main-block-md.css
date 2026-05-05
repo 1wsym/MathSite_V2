@@ -4,6 +4,14 @@
     padding-left: 50px;
 }
 
-#MainBlock h1 {
+#MainBlock h1,
+#MainBlock h2 {
     text-align: center;
+}
+
+#MainBlock ul,
+#MainBlock ol {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }

@@ -5,8 +5,8 @@ import ReactMarkdown from 'react-markdown';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
-const theory = import.meta.glob("../content/theory/*md", { as: 'raw', eager: true });
-const materials = import.meta.glob("../content/materials/*md", { as: 'raw', eager: true })
+const theory = import.meta.glob("../content/theory/*md?raw", { as: 'raw', eager: true });
+const materials = import.meta.glob("../content/materials/*md?raw", { as: 'raw', eager: true })
 
 function MainBlock({ activeId, type }) {
     let content;

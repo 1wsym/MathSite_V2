@@ -5,8 +5,17 @@ import ReactMarkdown from 'react-markdown';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
-const theory = import.meta.glob("/src/content/theory/*.md?raw", { as: 'raw', eager: true });
-const materials = import.meta.glob("/src/content/materials/*.md?raw", { as: 'raw', eager: true });
+const theory = import.meta.glob("/src/content/theory/*.md", {
+    query: '?raw',
+    import: 'default',
+    eager: true
+});
+
+const materials = import.meta.glob("/src/content/materials/*.md", {
+    query: '?raw',
+    import: 'default',
+    eager: true
+});
 
 function MainBlock({ activeId, type }) {
     const currentFiles = type === 'theory' ? theory : materials;
@@ -16,7 +25,7 @@ function MainBlock({ activeId, type }) {
         return fileName === `${activeId}.md`;
     });
 
-    const content = targetKey ? currentFiles[targetKey] : "";
+    const content = targetKey ? currentFiles[targetKey] : "Конспект не найден";
 
     return (
         <div id="MainBlock">

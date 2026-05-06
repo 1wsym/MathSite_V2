@@ -20,6 +20,10 @@ function SettingsBar() {
                 )}
             </div>
             <div className="settings-bar">
+                <div id='popUpInfo'>
+                    <p>fkvdmzvmzkvm</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint vitae deleniti perspiciatis quia nulla repudiandae sunt odio, ratione magni. Earum aperiam sunt accusantium illum, deserunt et a? Itaque, iusto amet.</p>
+                </div>
                 <md-filled-icon-button className="info-button-in-settings-bar">
                     <md-icon className="info-icon-in-settings-bar">error</md-icon>
                 </md-filled-icon-button>

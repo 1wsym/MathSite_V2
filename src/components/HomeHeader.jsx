@@ -20,7 +20,7 @@ function HomeHeader() {
                         Начать подготовку
                     </md-filled-button>
                     <md-outlined-button className="outlined-buttons-in-home">Калькулятор</md-outlined-button>
-                    <md-outlined-button className="outlined-buttons-in-home">Новости</md-outlined-button>
+                    {/* <md-outlined-button className="outlined-buttons-in-home">Новости</md-outlined-button> */}
                 </div>
             </header>
         </>

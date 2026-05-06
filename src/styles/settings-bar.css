@@ -37,3 +37,23 @@ md-filled-icon-button.theme-button-in-settings-bar {
 md-icon.theme-icon-in-settings-bar {
     --md-icon-size: 24px;
 }
+
+#popUpInfo {
+    position: absolute;
+    right: 120px;
+    background-color: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+    padding: 10px;
+    border-radius: 25px;
+    opacity: 0;
+    min-width: 400px;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.settings-bar:has(.info-button-in-settings-bar:hover) #popUpInfo {
+    opacity: 1;
+    visibility: visible;
+    opacity: 90%;
+    transition: opacity 0.3s ease;
+}

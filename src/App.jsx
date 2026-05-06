@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 import SettingsBar from "./components/SettingsBar.jsx"
 import Home from "./pages/Home.jsx"
@@ -9,16 +9,14 @@ import "./App.css"
 
 function App() {
   return (
-    <BrowserRouter basename="/MathSite_V2">
-      <SettingsBar />
+    <Router>
       <Routes>
-        <Route index element={<Home />} />
         <Route path="/" element={<Home />} />
-        <Route path="/Training" element={<Training />} />
-        <Route path="*" element={<Home />} />
+        <Route path="/training" element={<Training />} />
+        {/* Другие маршруты */}
       </Routes>
-    </BrowserRouter>
-  )
+    </Router>
+  );
 }
 
 export default App

@@ -10,13 +10,14 @@ import "./App.css"
 function App() {
   return (
     <Router>
+      <SettingsBar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route index element={<Home />} />
         <Route path="/training" element={<Training />} />
-        {/* Другие маршруты */}
+        <Route path="*" element={<Home />} />
       </Routes>
     </Router>
-  );
+  )
 }
 
 export default App

@@ -21,8 +21,13 @@ function SettingsBar() {
             </div>
             <div className="settings-bar">
                 <div id='popUpInfo'>
-                    <p>fkvdmzvmzkvm</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint vitae deleniti perspiciatis quia nulla repudiandae sunt odio, ratione magni. Earum aperiam sunt accusantium illum, deserunt et a? Itaque, iusto amet.</p>
+                    <h3>Индивидуальный проект</h3>
+                    <h4>"Сайт для подготовки к экзаменам по математике"</h4>
+                    <p>Выполнила студентка ГАПОУ НСО "НКПиИТ"</p>
+                    <p>группы ИСиП-1-9-25</p>
+                    <p>Ракибова А. А.</p>
+                    <p>Руководил проектом преподаватель математики</p>
+                    <p>Шмидт. Л. П.</p>
                 </div>
                 <md-filled-icon-button className="info-button-in-settings-bar">
                     <md-icon className="info-icon-in-settings-bar">error</md-icon>

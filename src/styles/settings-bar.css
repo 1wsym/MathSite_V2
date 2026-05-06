@@ -40,7 +40,7 @@ md-icon.theme-icon-in-settings-bar {
 
 #popUpInfo {
     position: absolute;
-    right: 120px;
+    right: 150px;
     background-color: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
     padding: 10px;
@@ -49,6 +49,7 @@ md-icon.theme-icon-in-settings-bar {
     min-width: 400px;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
 }
 
 .settings-bar:has(.info-button-in-settings-bar:hover) #popUpInfo {

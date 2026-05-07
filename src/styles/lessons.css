@@ -1,0 +1,26 @@
+.input-section {
+    display: flex;
+    gap: 10px;
+    ;
+}
+
+.button-check,
+.answer-input {
+    height: 50px;
+}
+
+.solution-button {
+    margin-top: 50px;
+}
+
+.answer-input.input-success {
+    --md-outlined-text-field-outline-width: 2px;
+    --md-outlined-text-field-outline-color: #2e7d32;
+    --md-outlined-text-field-hover-outline-color: #2e7d32;
+    --md-outlined-text-field-focus-outline-color: #2e7d32;
+    --md-outlined-text-field-label-text-color: #2e7d32;
+    --md-outlined-text-field-hover-label-text-color: #2e7d32;
+    --md-outlined-text-field-focus-label-text-color: #2e7d32;
+    --md-outlined-text-field-supporting-text-color: #2e7d32;
+    --md-outlined-text-field-focus-supporting-text-color: #2e7d32;
+}
